@@ -50,7 +50,7 @@ spec:
 
 ## 入口网关（master节点）
 ```
-kubectl apply -f c
+kubectl apply -f service-c-gateway.yaml
 ```
 
 ## 访问
