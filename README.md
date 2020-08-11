@@ -27,8 +27,6 @@ docker images kyg/service-c-docker
 ## 部署
 ```
 kubectl apply -f service-c.yaml
-kubectl patch svc service-c -p '{"spec": {"type": "LoadBalancer"}}'
-kubectl edit service service-c
 ```
 
 ## 暴露服务
