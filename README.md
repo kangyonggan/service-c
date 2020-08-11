@@ -24,12 +24,17 @@ docker build -t kyg/service-c-docker .
 docker images kyg/service-c-docker
 ```
 
-## 部署
+## 部署服务（master节点）
 ```
-kubectl apply -f service-c.yaml
+kubectl apply -f service-c-master.yaml
 ```
 
-## 暴露服务
+## 部署服务（node节点）
+```
+kubectl apply -f service-c-1.yaml
+```
+
+## 暴露服务（master节点）
 ```
 kubectl get svc
 kubectl edit service service-c
@@ -43,7 +48,7 @@ spec:
 - 192.168.0.5（内网IP）
 - 172.190.105.90（外网IP）
 
-## 入口网关
+## 入口网关（master节点）
 ```
 kubectl apply -f c
 ```
