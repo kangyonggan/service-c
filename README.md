@@ -37,7 +37,11 @@ kubectl edit service service-c
 spec:
   externalIPs:
   - 192.168.0.5
+  - 172.190.105.90
 ```
+
+- 192.168.0.5（内网IP）
+- 172.190.105.90（外网IP）
 
 ## 入口网关
 ```
@@ -47,4 +51,5 @@ kubectl apply -f c
 ## 访问
 ```
 curl http://192.168.0.5:8093/userInfo?username=admin
+curl http://172.190.105.90:8093/userInfo?username=admin
 ```
